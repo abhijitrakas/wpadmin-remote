@@ -5,7 +5,7 @@ Plugin URI:   https://github.com/abhijitrakas/wpadmin-remote
 Description:  The plugin help user to navigate easily in WordPress admin panel
 Version:      1.0.0
 Author:       Abhijit Rakas
-Author URI:   https://developer.wordpress.org/
+Author URI:   https://profiles.wordpress.org/abhijitrakas
 License:      GPL2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  wpadminremote

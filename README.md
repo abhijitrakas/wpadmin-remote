@@ -1,8 +1,16 @@
 # wpadmin-remote
 
-This Plugin will helps you to navigate in WPadmin using various shortcuts and tiny JS terminal.
+This Plugin will helps you to navigate in WP admin using various shortcuts with tiny JS terminal.
 
-## How to Use
+## Installing
+
+1) Install and activate plugin.
+2) Use CTRL + ` to show and hide terminal.
+3) Use commands to navigate in WordPress admin site.
+
+![](assets/images/wpadmin-remote-process.gif)
+
+## Commands
 
 | Page | Command | Example |
 |------|:-------:|:-------:|
