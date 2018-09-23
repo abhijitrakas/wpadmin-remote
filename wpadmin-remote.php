@@ -2,7 +2,7 @@
 /*
 Plugin Name:  WP Admin Remote
 Plugin URI:   https://github.com/abhijitrakas/wpadmin-remote
-Description:  The plugin help user to navigate easily in WordPress admin panel
+Description:  This Plugin will helps you to navigate in WP admin using various shortcuts with tiny JS terminal
 Version:      1.0.0
 Author:       Abhijit Rakas
 Author URI:   https://profiles.wordpress.org/abhijitrakas

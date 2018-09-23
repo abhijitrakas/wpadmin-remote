@@ -8,7 +8,7 @@ This Plugin will helps you to navigate in WP admin using various shortcuts with 
 2) Use CTRL + ` to show and hide terminal.
 3) Use commands to navigate in WordPress admin site.
 
-![](assets/images/wpadmin-remote-process.gif)
+![](assets/screenshot-1.gif)
 
 ## Commands
 
