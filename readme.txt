@@ -3,8 +3,8 @@ Contributors: abhijitrakas
 Donate link: #
 Tags: wpadmin, navigation, wpnavigation, wpremote
 Requires at least: 4.5
-Tested up to: 5.0
-Stable tag: 1.0.1
+Tested up to: 5.4.0
+Stable tag: 1.2.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,7 +32,9 @@ No for now.
 1. The process to use it.
 
 == Changelog ==
-There is no change log
+= 1.2.0 =
+* Remove GitHub security alerts.
+* Updated Webpack.
 
 == Upgrade Notice ==
 This is First version
