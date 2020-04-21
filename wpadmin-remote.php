@@ -3,7 +3,7 @@
 Plugin Name:  WP Admin Remote
 Plugin URI:   https://github.com/abhijitrakas/wpadmin-remote
 Description:  This Plugin will helps you to navigate in WP admin using various shortcuts with tiny JS terminal
-Version:      1.0.0
+Version:      1.0.1
 Author:       Abhijit Rakas
 Author URI:   https://profiles.wordpress.org/abhijitrakas
 License:      GPL2
@@ -22,9 +22,9 @@ if ( ! defined( 'WP_ADMIN_REMOTE' ) ) {
  */
 function wpadminremote_load_scripts() {
 
-	wp_enqueue_style( 'wpadminremote-admin-css', plugin_dir_url( __FILE__ ) . '/assets/css/style.css', false, WP_ADMIN_REMOTE );
+	wp_enqueue_style( 'wpadminremote-admin-css', plugin_dir_url( __FILE__ ) . '/assets/build/css/main.css', false, WP_ADMIN_REMOTE );
 
-	wp_register_script( 'wpadminremote-admin-js', plugin_dir_url( __FILE__ ) . '/assets/js/bundle.js', false, WP_ADMIN_REMOTE );
+	wp_register_script( 'wpadminremote-admin-js', plugin_dir_url( __FILE__ ) . '/assets/build/js/bundle.js', false, WP_ADMIN_REMOTE );
 
 	$urls = [
 		'po'     => admin_url( 'edit.php' ),
