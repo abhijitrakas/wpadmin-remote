@@ -1,42 +1,59 @@
-const path = require( 'path' );
+const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = {
+const BUILD_DIR = path.resolve(__dirname, 'assets/build');
+
+module.exports = ( env, argv ) => ( {
 
 	entry : [
-		'./src/es6/index.js',
-		'./src/scss/wpadminremote-style.scss'
+		'./assets/src/js/index.js',
 	],
 
 	output: {
-		path    : path.resolve( __dirname, 'assets' ),
+		path: BUILD_DIR,
 		filename: 'js/bundle.js'
 	},
 
-	mode  : 'development',
+	mode: argv.mode,
 
 	module: {
 		rules: [
 			{
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: 'babel-loader'
+			},
 			{
 				test: /\.scss$/,
+				exclude: /node_modules/,
 				use: [
-					{
-						loader: 'file-loader',
-						options: {
-							name: 'style.css',
-							outputPath: 'css/',
-							minimize: false
-						}
-					},
-					{ loader: 'extract-loader' },
-					{ loader: "css-loader" },
-					{ loader: "sass-loader" }
+					MiniCssExtractPlugin.loader,
+					'css-loader',
+					'sass-loader',
 				]
 			},
 		]
 	},
-};
+
+	optimization: {
+		minimizer: [
+			new UglifyJsPlugin(
+				{
+					cache: false,
+					parallel: true,
+					sourceMap: false,
+				}
+			),
+		]
+	},
+
+	plugins: [
+		new MiniCssExtractPlugin(
+			{
+				filename: 'css/[name].css',
+				path: BUILD_DIR,
+			}
+		),
+	]
+} );

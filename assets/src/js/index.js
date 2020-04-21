@@ -4,6 +4,8 @@
  * @package wpadmin-remote
  */
 
+import '../sass/main.scss';
+
 /**
  * Class to handle wpadmin remote.
  */
